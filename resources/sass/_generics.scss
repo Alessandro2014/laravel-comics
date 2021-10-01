@@ -1,0 +1,29 @@
+header {
+    .row {
+        height: 120px;
+        figure {
+            flex-grow: 1;
+            img {
+                max-width: 80px;
+                height: auto;
+            }
+        }
+    }
+    ul {
+        li {
+            display: flex;
+            &.active {
+                border-bottom: 2px solid $blue-color;
+            }
+        }
+    }
+    a {
+        text-transform: uppercase;
+        color: $gray-color;
+        font-weight: bold;
+        padding: 10px;
+        &:hover {
+            color: $blue-color;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+header .row {
+  height: 120px;
+}
+header .row figure {
+  flex-grow: 1;
+}
+header .row figure img {
+  max-width: 80px;
+  height: auto;
+}
+header ul li {
+  display: flex;
+}
+header ul li.active {
+  border-bottom: 2px solid #0282F9;
+}
+header a {
+  text-transform: uppercase;
+  color: #777575;
+  font-weight: bold;
+  padding: 10px;
+}
+header a:hover {
+  color: #0282F9;
+}
