@@ -50,6 +50,11 @@
             </ul>
         </div>
     </header>
+    <section>
+        <div class="jumbotron">
+            <h3 class="placeholder">current series</h3>
+        </div>
+    </section>
 </body>
 
 </html>

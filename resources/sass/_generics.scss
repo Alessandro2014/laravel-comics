@@ -1,23 +1,4 @@
-// .container{
-//     max-width: 1300px;
-//     margin: 0 auto;
-//     .row {
-//       display: flex;
-//       align-items: center;
-//     }
-//   }
-// li {
-//     list-style: none;
-//     a {
-//         text-decoration: none;
-//         color: $gray-color;
-//         text-transform: capitalize;
-//     }
-// }
-//   h3 {
-//     color: white;
-//     text-transform: uppercase;
-//   }
+//  HEADER
 .container {
     max-width: 1300px;
     margin: 0 auto;
@@ -53,4 +34,23 @@
             }
         }
     }
+}
+
+// JUMBOTRON
+.jumbotron {
+    background-image: url("../images/jumbotron.jpg");
+    height: 400px;
+    h3 {
+        color: white;
+        text-transform: uppercase;
+    }
+}
+.placeholder {
+    padding: 10px;
+    position: absolute;
+    left: 10%;
+    top: 500px;
+    padding: 10px;
+    background-color: $blue-color;
+    display: inline-block;
 }
