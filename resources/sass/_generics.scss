@@ -2,35 +2,35 @@
 .container {
     max-width: 1300px;
     margin: 0 auto;
-    .row {
-        height: 120px;
-        display: flex;
-        align-items: center;
-        figure {
-            flex-grow: 1;
-            img {
-                max-width: 80px;
-                height: auto;
-            }
+}
+.row {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+figure {
+    flex-grow: 1;
+    img {
+        max-width: 80px;
+        height: auto;
+    }
+}
+ul {
+    display: flex;
+    li {
+        list-style: none;
+        &.active {
+            border-bottom: 2px solid $blue-color;
         }
-        ul {
-            display: flex;
-            li {
-                list-style: none;
-                &.active {
-                    border-bottom: 2px solid $blue-color;
-                }
-                a {
-                    text-transform: uppercase;
-                    color: $gray-color;
-                    font-weight: bold;
-                    padding: 10px;
-                    text-decoration: none;
-                    color: $gray-color;
-                    &:hover {
-                        color: $blue-color;
-                    }
-                }
+        a {
+            text-transform: uppercase;
+            color: $gray-color;
+            font-weight: bold;
+            padding: 10px;
+            text-decoration: none;
+            color: $gray-color;
+            &:hover {
+                color: $blue-color;
             }
         }
     }
@@ -53,4 +53,34 @@
     padding: 10px;
     background-color: $blue-color;
     display: inline-block;
+}
+
+// SECTION COMICS
+.series {
+    background-color: #1c1c1c;
+    text-align: center;
+    .current-series {
+        padding-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        padding-bottom: 10px;
+    }
+    .button {
+        margin: 30px 0;
+        font-size: 0.9rem;
+        padding: 10px;
+        background-color: $blue-color;
+        display: inline-block;
+    }
+}
+.cards {
+    height: auto;
+    width: 200px;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: initial;
+    img {
+        width: 100%;
+    }
 }
