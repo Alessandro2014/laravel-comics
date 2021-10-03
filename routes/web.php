@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+   
+
+
+    return view('home');
+})->name('home');
+
+Route::get('/comics', function () {
     $data =  [
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
@@ -227,10 +234,16 @@ Route::get('/', function () {
             ],
         ],
     ];
-    return view('home', ['comics' => $data]);
-})->name('home');
-
-Route::get('/comics', function () {
-    
-    return view('comics');
+    return view('comics', ['comics' => $data]);
 })->name('comics');
+
+Route::get('/characters', function () {
+    
+    return view('characters');
+})->name('characters');
+
+Route::get('/movies', function () {
+    
+
+    return view('movies');
+})->name('movies');

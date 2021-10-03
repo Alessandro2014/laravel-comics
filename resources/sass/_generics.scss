@@ -1,13 +1,5 @@
 //  HEADER
-.container {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-.row {
-    height: 120px;
-    display: flex;
-    align-items: center;
-}
+
 figure {
     flex-grow: 1;
     img {
@@ -17,6 +9,7 @@ figure {
 }
 ul {
     display: flex;
+    align-items: center;
     li {
         list-style: none;
         &.active {
@@ -36,18 +29,21 @@ ul {
     }
 }
 
+
 // JUMBOTRON
 .jumbotron {
     background-image: url("../images/jumbotron.jpg");
     height: 400px;
-    h3 {
-        color: white;
-        text-transform: uppercase;
-    }
+}
+
+h3 {
+    color: white;
+    text-transform: uppercase;
 }
 .placeholder {
     padding: 10px;
     position: absolute;
+    z-index: 4;
     left: 10%;
     top: 500px;
     padding: 10px;
@@ -59,6 +55,8 @@ ul {
 .series {
     background-color: #1c1c1c;
     text-align: center;
+    position: relative;
+    z-index: 3;
     .current-series {
         padding-top: 3rem;
         display: flex;
@@ -74,7 +72,7 @@ ul {
         display: inline-block;
     }
 }
-.cards {
+.card {
     height: auto;
     width: 200px;
     padding: 1rem;
@@ -82,5 +80,73 @@ ul {
     text-align: initial;
     img {
         width: 100%;
+    }
+}
+
+// FOOTER
+#footer-top {
+    height: 400px;
+    width: 100%;
+    background-image: url("../images/footer-bg.jpg");
+    position: relative;
+
+    nav {
+        margin: 20px 25px 0 0;
+        height: 400px;
+        h3 {
+            margin: 15px 0;
+        }
+        ul {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            li {
+                list-style: none;
+                margin-bottom: 5px;
+                a {
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    color: $gray-color;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    figure {
+        position: absolute;
+        top: -50px;
+        right: 50px;
+        z-index: 1;
+        img {
+            max-width: 90%;
+        }
+    }
+}
+
+#footer-bottom {
+    position: relative;
+    z-index: 2;
+    height: 120px;
+    background-color: $bg-footer;
+    .container .row {
+        justify-content: space-between;
+        height: 120px;
+        align-content: center;
+        .link-sign {
+            border: 2px solid $blue-color;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .social {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3 {
+            color: $blue-color;
+        }
     }
 }

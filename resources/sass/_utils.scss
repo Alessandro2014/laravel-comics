@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.row {
+    height: 120px;
+    display: flex;
+}
+
+.my-3 {
+    margin: 3rem 0;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.mx-2 {
+    margin: 0 2rem;
+}
+
+.mx-1 {
+    margin: 0 1rem;
+}

@@ -8,13 +8,13 @@
             <!-- STAMPA LINK DI NAVIGAZIONE -->
             <ul>
                 <li>
-                    <a href="#">Characters</a>
+                    <a href="{{ route('characters') }}">Characters</a>
                 </li>
                 <li>
-                    <a href="#">Comics</a>
+                    <a href="{{ route('comics') }}">Comics</a>
                 </li>
                 <li>
-                    <a href="#">Movies</a>
+                    <a href="{{ route('movies') }}">Movies</a>
                 </li>
                 <li>
                     <a href="#">TV</a>
