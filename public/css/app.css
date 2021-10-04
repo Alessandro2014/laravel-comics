@@ -36,6 +36,8 @@
 
 header figure {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 header figure a img {
   max-width: 80px;
@@ -76,7 +78,7 @@ h3 {
   position: absolute;
   z-index: 4;
   left: 10%;
-  top: 500px;
+  top: 510px;
   padding: 10px;
   background-color: #0282F9;
   display: inline-block;
@@ -179,7 +181,15 @@ h3 {
   color: #0282F9;
 }
 
-#comics h2 {
+#comics {
+  position: relative;
+  z-index: 5;
+  min-height: 500px;
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.price {
   padding: 5px;
   background-color: #01a701;
   text-transform: uppercase;

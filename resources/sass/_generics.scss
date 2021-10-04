@@ -3,6 +3,8 @@
 header {
     figure {
         flex-grow: 1;
+        display: flex;
+    align-items: center;
         a img {
             max-width: 80px;
             height: auto;
@@ -44,7 +46,7 @@ h3 {
     position: absolute;
     z-index: 4;
     left: 10%;
-    top: 500px;
+    top: 510px;
     padding: 10px;
     background-color: $blue-color;
     display: inline-block;

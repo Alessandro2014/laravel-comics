@@ -59,3 +59,11 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
     return view('links.shop');
 })->name('shop');
+
+// SINGOLO COMIC
+Route::get('/comic', function () {
+    $comics = config('comics');
+    $comic = $comics[1];
+
+    return view('layouts.comic', compact('comic'));
+})->name('comic');
