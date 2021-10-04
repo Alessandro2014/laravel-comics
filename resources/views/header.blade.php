@@ -1,42 +1,19 @@
-
-
 <header class="container">
-        <div class="row">
-            <figure>
-                <a href="{{ url('/') }}"><img src="{{ asset('images/dc-logo.png') }}" alt="logo"></a>
-            </figure>
-            <!-- STAMPA LINK DI NAVIGAZIONE -->
-            <ul>
-                <li>
-                    <a href="{{ route('characters') }}">Characters</a>
+    <div class="row">
+        <figure>
+            {{-- logo  con link per reindirizzare alla home --}}
+            <a href="{{ url('/') }}"><img src="{{ asset('images/dc-logo.png') }}" alt="logo"></a>
+        </figure>
+        <!-- STAMPA LINK DI NAVIGAZIONE -->
+        <ul>
+            @foreach ($links as $link)
+                <li> 
+                    {{-- aggiunta classe active --}}
+                    <a class="{{ request()->routeIs($link['route']) ? 'active' : ''}}"
+                    href="{{ route($link['route']) }}">{{ $link['title'] }}</a>
                 </li>
-                <li>
-                    <a href="{{ route('comics') }}">Comics</a>
-                </li>
-                <li>
-                    <a href="{{ route('movies') }}">Movies</a>
-                </li>
-                <li>
-                    <a href="#">TV</a>
-                </li>
-                <li>
-                    <a href="#">Games</a>
-                </li>
-                <li>
-                    <a href="#">Collectibles</a>
-                </li>
-                <li>
-                    <a href="#">Videos</a>
-                </li>
-                <li>
-                    <a href="#">Fans</a>
-                </li>
-                <li>
-                    <a href="#">News</a>
-                </li>
-                <li>
-                    <a href="#">Shop</a>
-                </li>
-            </ul>
-        </div>
-    </header>
+            @endforeach
+
+        </ul>
+    </div>
+</header>

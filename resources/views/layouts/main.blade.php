@@ -10,16 +10,17 @@
 </head>
 
 <body>
-    @include('header')
+    {{-- INCLUDO HEADER E PASSO ARRAY ASSOCIATIVO TRAMITE FILE MENU --}}
+    @include('header', ['links' => config('menu')])
 
     <section>
         <div class="jumbotron">
             <h3 class="placeholder">current series</h3>
         </div>
     </section>
-
+    {{-- INCLUDO MAIN CHE CAMBIA PER OGNI LINK DEL MENU --}}
     @yield('content')
-
+    {{-- INCLUDO FOOTER --}}
     @include('footer')
 
 </body>

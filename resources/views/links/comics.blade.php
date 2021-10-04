@@ -2,21 +2,23 @@
 
 @section('title', 'Comics')
 
-@section('content')
-    <div class="container">
-        <div id="comics" class="row">
-            <div class="prova my-3">
-                <div>
-                    <h2>action comics #1000: the deluxe edition</h2>
-                    <div>u.s. price $19.90</div>
-                </div>
 
-                <div></div>
+
+@section('content')
+    <section class="series">
+        <!-- CONTENITORE CARDS -->
+        <div class="container">
+            <div class="current-series">
+                {{-- STAMPA SINGOLA CARD CON CICLO FOREACH --}}
+                @foreach ($comics as $comic)
+                    <div class="card">
+                        <img src={{ $comic['thumb'] }} :alt="{{ $comic['series'] }}">
+                        <figcaption>{{ $comic['series'] }}</figcaption>
+                    </div>
+                @endforeach
             </div>
-            <figure>
-                <img src="{{ asset('images/adv.jpg') }}" alt="dc-adv">
-            </figure>
+            <h3 class="button">load moore</h3>
         </div>
 
-    </div>
+    </section>
 @endsection

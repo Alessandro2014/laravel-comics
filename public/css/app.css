@@ -34,10 +34,10 @@
   margin: 0 1rem;
 }
 
-figure {
+header figure {
   flex-grow: 1;
 }
-figure img {
+header figure a img {
   max-width: 80px;
   height: auto;
 }
@@ -49,9 +49,6 @@ ul {
 ul li {
   list-style: none;
 }
-ul li.active {
-  border-bottom: 2px solid #0282F9;
-}
 ul li a {
   text-transform: uppercase;
   color: #777575;
@@ -60,8 +57,8 @@ ul li a {
   text-decoration: none;
   color: #777575;
 }
-ul li a:hover {
-  color: #0282F9;
+ul li a.active, ul li a:hover {
+  background-color: #6ab6fd;
 }
 
 .jumbotron {
@@ -180,4 +177,10 @@ h3 {
 }
 #footer-bottom .social h3 {
   color: #0282F9;
+}
+
+#comics h2 {
+  padding: 5px;
+  background-color: #01a701;
+  text-transform: uppercase;
 }

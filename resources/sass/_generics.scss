@@ -14,9 +14,6 @@ ul {
     align-items: center;
     li {
         list-style: none;
-        &.active {
-            border-bottom: 2px solid $blue-color;
-        }
         a {
             text-transform: uppercase;
             color: $gray-color;
@@ -24,8 +21,9 @@ ul {
             padding: 10px;
             text-decoration: none;
             color: $gray-color;
+            &.active,
             &:hover {
-                color: $blue-color;
+                background-color: $primary-color;
             }
         }
     }
