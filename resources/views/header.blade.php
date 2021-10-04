@@ -3,7 +3,7 @@
 <header class="container">
         <div class="row">
             <figure>
-                <img src="{{ asset('images/dc-logo.png') }}" alt="logo">
+                <a href="{{ url('/') }}"><img src="{{ asset('images/dc-logo.png') }}" alt="logo"></a>
             </figure>
             <!-- STAMPA LINK DI NAVIGAZIONE -->
             <ul>
