@@ -18,11 +18,22 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+// ALBUM FUMETTI
 Route::get('/comics', function () {
     
     $comics = config('comics');
     return view('links.comics', compact('comics'));
 })->name('comics');
+
+
+// SINGOLO FUMETTO
+Route::get('comic', function () {
+    $comics = config('comics');
+    $comic = $comics[0];
+
+    return view('layouts.comic', compact('comic'));
+})->name('comic');
+
 
 Route::get('/characters', function () {
     return view('links.characters');
@@ -60,10 +71,3 @@ Route::get('/shop', function () {
     return view('links.shop');
 })->name('shop');
 
-// SINGOLO COMIC
-Route::get('/comic', function () {
-    $comics = config('comics');
-    $comic = $comics[1];
-
-    return view('layouts.comic', compact('comic'));
-})->name('comic');

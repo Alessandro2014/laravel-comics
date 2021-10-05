@@ -1,14 +1,40 @@
-    #comics {
-        position: relative;
-        z-index: 5;
-        min-height: 500px;
-        padding: 50px 0;
-        background-color: #fff;
+#comics {
+    position: relative;
+    z-index: 5;
+    min-height: 400px;
+    padding: 50px 0;
+    background-color: #fff;
+    .row {
+        .col-7 {
+            width: calc(100% / 12 * 7);
+            max-width: calc(100% / 12 * 7);
+        }
+        .col-5 {
+            width: calc(100% / 12 * 3);
+            max-width: calc(100% / 12 * 3);
+            margin-left: calc(100% / 12 * 2);
+        }
+        h2 {
+            text-transform: uppercase;
+        }
+        .section-price {
+            display: flex;
+            flex-direction: column;
+
+            .price {
+                color: #fff;
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(1, 167, 1);
+                > div {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
 }
 
-.price {
-        padding: 5px;
-        background-color: rgb(1, 167, 1);    
-        text-transform: uppercase;
-
-    }
+.border-gray {
+    border: 1px solid gray;
+    padding: 10px;
+}

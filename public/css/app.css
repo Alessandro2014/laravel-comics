@@ -184,13 +184,37 @@ h3 {
 #comics {
   position: relative;
   z-index: 5;
-  min-height: 500px;
+  min-height: 400px;
   padding: 50px 0;
   background-color: #fff;
 }
-
-.price {
-  padding: 5px;
-  background-color: #01a701;
+#comics .row .col-7 {
+  width: 58.3333333333%;
+  max-width: 58.3333333333%;
+}
+#comics .row .col-5 {
+  width: 25%;
+  max-width: 25%;
+  margin-left: 16.6666666667%;
+}
+#comics .row h2 {
   text-transform: uppercase;
+}
+#comics .row .section-price {
+  display: flex;
+  flex-direction: column;
+}
+#comics .row .section-price .price {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  background-color: #01a701;
+}
+#comics .row .section-price .price > div {
+  flex-grow: 1;
+}
+
+.border-gray {
+  border: 1px solid gray;
+  padding: 10px;
 }
