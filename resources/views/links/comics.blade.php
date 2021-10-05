@@ -12,7 +12,7 @@
                 {{-- STAMPA SINGOLA CARD CON CICLO FOREACH --}}
                 @foreach ($comics as $comic)
                     <div class="card">
-                        <a href="{{ url('comic') }}">
+                        <a href="{{ url("comics/$loop->index") }}">
                             <img src={{ $comic['thumb'] }} alt="{{ $comic['series'] }}">
                         </a>
                         <figcaption>{{ $comic['series'] }}</figcaption>

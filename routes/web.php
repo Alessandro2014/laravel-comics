@@ -27,14 +27,14 @@ Route::get('/comics', function () {
 
 
 // SINGOLO FUMETTO
-Route::get('comic', function () {
+Route::get('/comics/{id}', function ($id) {
     $comics = config('comics');
-    $comic = $comics[0];
+    $comic = $comics[$id];
 
     return view('layouts.comic', compact('comic'));
 })->name('comic');
 
-
+// LINK DEL MENU
 Route::get('/characters', function () {
     return view('links.characters');
 })->name('characters');
